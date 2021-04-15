@@ -34,9 +34,13 @@ jobs:
         run: yarn
         
       # Runs a single command using the runners shell
+      - name: Linting
+        run: yarn lint
+        
+      # Runs a single command using the runners shell
       - name: Compile
-        run: npx hardhat compile
+        run: yarn compile
       
       # Runs a single command using the runners shell
       - name: Test
-        run: npx hardhat test
+        run: yarn test
